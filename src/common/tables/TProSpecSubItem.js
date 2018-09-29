@@ -1,0 +1,21 @@
+const Sequelize=require('sequelize');
+module.exports={
+    id:{//主键id
+        primaryKey:true,
+        autoIncrement:true,
+        type:Sequelize.BIGINT,
+        allowNull:false
+    },
+    specItemId:{
+        type:Sequelize.BIGINT,
+        allowNull:false
+    },
+    name:{
+        type:Sequelize.STRING,
+        allowNull:false
+    },
+    code:{
+        type:Sequelize.STRING,
+        allowNull:false
+    }
+}

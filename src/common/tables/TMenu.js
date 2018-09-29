@@ -1,0 +1,29 @@
+const Sequelize=require('sequelize');
+module.exports={
+    id:{//主键id
+        primaryKey:true,
+        autoIncrement:true,
+        type:Sequelize.BIGINT,
+        allowNull:false
+    },
+    name:{//菜单名
+        type:Sequelize.STRING,
+        allowNull:false
+    },
+    url:{//访问url
+        type:Sequelize.STRING,
+        allowNull:false
+    },
+    unitName:{//唯一标识名，可直接用url
+        type:Sequelize.STRING,
+        allowNull:false
+    },
+    type:{//类型，0代表菜单，1代表按钮
+        type:Sequelize.SMALLINT,
+        allowNull:false
+    },
+    parentId:{//父id
+        type:Sequelize.BIGINT,
+        allowNull:false
+    }
+}

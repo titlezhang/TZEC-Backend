@@ -1,0 +1,34 @@
+const Sequelize=require('sequelize');
+module.exports={
+    id:{//主键id
+        primaryKey:true,
+        autoIncrement:true,
+        type:Sequelize.BIGINT,
+        allowNull:false
+    },
+    name:{//商品名称
+        type:Sequelize.STRING,
+        allowNull:false
+    },
+    adWords:{//广告语
+        type:Sequelize.TEXT,
+        allowNull:true
+    },
+    categoryTreeCode:{//所属类目树
+        type:Sequelize.STRING,
+        allowNull:false
+    },
+    mainPic:{//主图
+        type:Sequelize.BIGINT,
+        allowNull:false
+    },
+    detailPic:{
+        type:Sequelize.BIGINT,
+        allowNull:true
+    },
+    salesWords:{//促销语
+        type:Sequelize.STRING,
+        allowNull:true
+    }
+
+}
